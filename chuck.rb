@@ -14,7 +14,7 @@ class ChuckJokes
   end
 
   def replace_name(fname, lname)
-    jk = ChuckNorris::JokeFinder.get_joke(fname, lname)
+    jk = ChuckNorris::JokeFinder.get_joke(first_name: fname.downcase.capitalize, last_name: lname.downcase.capitalize)
     puts jk.joke
   end
 
